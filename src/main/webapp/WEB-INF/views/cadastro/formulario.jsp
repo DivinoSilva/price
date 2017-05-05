@@ -40,11 +40,11 @@
 				</div>
 				<div class="grupo">
 					<label for="campo2">E-mail</label>
-					<input type="email" required="" id="campo2" name="email">
+					<input type="email" required="e-mail" id="campo2" name="email">
 				</div>
 				<div class="grupo">
 					<label for="campo3">CEP</label>
-					<input type="text" required=""  id="campo3" name="cep" pattern= "\d{5}-?\d{3}" ">
+					<input type="text" required="CEP"  id="campo3" name="cep" pattern= "\d{5}-?\d{3}" ">
 				</div>			
 				<div class="grupo">
 					<label for="campo4">Logradouro</label>
@@ -52,15 +52,19 @@
 				</div>
 				<div class="grupo">
 					<label for="campo5">Número</label>
-					<input type="text" required=""  id="campo5" name="numero" pattern="[0-9]+$">
+					<input type="text" required="número"  id="campo5" name="numero" pattern="[0-9]+$">
 				</div>
 				<div class="grupo">
 					<label for="campo6">Complemento</label>
 					<input type="text"   id="campo6" name="complemento">
 				</div>
 				<div class="grupo">
-					<label for="campo7">Cidade</label>
-					<input type="text" required="" id="campo7" name="cidade">
+					<label for="campo7">Bairro</label>
+					<input type="text" required="" id="campo7" name="bairro">
+				</div>	
+				<div class="grupo">
+					<label for="campo8">Cidade</label>
+					<input type="text" required="" id="campo8" name="cidade">
 				</div>	
 
 				<button class="btn btn-cadastrar" type="submit">CADASTRAR</button>

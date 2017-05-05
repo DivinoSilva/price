@@ -26,6 +26,11 @@ public class Cidade {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	@Override
+	public String toString() {
+		return "Cidade [id=" + id + ", nome=" + nome + ", getId()=" + getId() + ", getNome()=" + getNome() + "]";
+	}
+	
 	
 	
 

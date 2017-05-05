@@ -50,6 +50,11 @@
 					<tr >
 						<td>${usuario.nome}</td>
 						<td>${usuario.email}</td>
+						<td>${usuario.endereco.cep}</td>
+						<td>${usuario.endereco.logradouro}</td>
+						<td>${usuario.endereco.numero}</td>
+						<td>${usuario.endereco.cep}</td>
+						<td>${usuario.endereco.cidade.nome}</td>
 					</tr>	
 				</c:forEach>			
 			</table>	
