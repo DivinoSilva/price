@@ -44,17 +44,21 @@
 					<td>LOGRADOUORO</td>
 					<td>NÚMERO</td>
 					<td>COMPLEMENTO</td>
+					<td>BAIRRO</td>
 					<td>CIDADE</td>
 				</tr>
 				<c:forEach items="${usuario}" var="usuario">
 					<tr >
 						<td>${usuario.nome}</td>
 						<td>${usuario.email}</td>
-						<td>${usuario.endereco.cep}</td>
-						<td>${usuario.endereco.logradouro}</td>
-						<td>${usuario.endereco.numero}</td>
-						<td>${usuario.endereco.cep}</td>
-						<td>${usuario.endereco.cidade.nome}</td>
+						<c:forEach items="${usuario.endereco}" var="endereco" varStatus="status">
+							<td>${endereco.cep}</td>
+							<td>${endereco.logradouro}</td>
+							<td>${endereco.numero}</td>
+							<td>${endereco.complemento}</td>
+							<td>${endereco.bairro}</td>
+							<td>${endereco.cidade.nome}</td>
+						</c:forEach>
 					</tr>	
 				</c:forEach>			
 			</table>	

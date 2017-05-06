@@ -1,13 +1,15 @@
 package br.com.price.model;
 
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -18,8 +20,10 @@ public class Usuario {
 	private String nome;
 	private String email;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-	private Endereco endereco;
+	
+	
+	@OneToMany(cascade=CascadeType.ALL,orphanRemoval=true, fetch=FetchType.EAGER)
+	private List<Endereco> endereco;
 	
 	public Long getId() {
 		return id;
@@ -45,11 +49,11 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Endereco getEndereco() {
+	public List<Endereco> getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(Endereco endereco) {
+	public void setEndereco(List<Endereco> endereco) {
 		this.endereco = endereco;
 	}
 

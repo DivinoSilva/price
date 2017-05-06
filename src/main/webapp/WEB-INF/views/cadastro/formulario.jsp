@@ -52,7 +52,7 @@
 				</div>
 				<div class="grupo">
 					<label for="campo5">Número</label>
-					<input type="text" required="número"  id="campo5" name="numero" pattern="[0-9]+$">
+					<input type="text" required=""  id="campo5" name="numero" pattern="[0-9]+$">
 				</div>
 				<div class="grupo">
 					<label for="campo6">Complemento</label>

@@ -1,6 +1,7 @@
 package br.com.price.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -52,6 +53,7 @@ public class UsuarioController {
 	@RequestMapping("/ok")
 	protected ModelAndView service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Usuario usuario = new Usuario();
+		List<Endereco> enderecos = new ArrayList<>();
 		Endereco endereco = new Endereco();
 		Cidade cidade = new Cidade();
 		usuario.setNome(req.getParameter("nome"));
@@ -62,10 +64,9 @@ public class UsuarioController {
 		endereco.setComplemento(req.getParameter("complemento"));
 		endereco.setBairro(req.getParameter("bairro"));
 		cidade.setNome(req.getParameter("cidade"));
-		
 		endereco.setCidade(cidade);
-		System.out.println("City: "+cidade.getNome());
-		usuario.setEndereco(endereco);
+		enderecos.add(endereco);
+		usuario.setEndereco(enderecos);
 		
 		//Associando o ojeto a requisição
 		req.setAttribute("usuario", usuario);
